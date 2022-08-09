@@ -148,3 +148,50 @@ nav a:nth-child(5):hover~#indicator {
     opacity: 0.6;
     transition: 0.5s;
 }
+
+.team_div_01{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0px;
+    margin: 50px 0px;
+
+}
+
+
+
+.team_image
+{
+    height: 120px;
+    width: 120px;
+    border-radius: 100%;
+}
+
+.team_div_02
+{
+    display: flex;
+}
+
+.team_div_02 > * {
+    flex: 1 1 0;
+}
+
+.team_div_03{
+    padding: 0px 50px;
+    text-align: center;
+}
+
+.team_div_04{
+    padding: 0px 50px;
+    margin-left: 100px;
+}
+
+
+ .faq_div_01{
+    margin: 50px 200px;
+ }
+
+ .faq_div_02{
+    text-align: center;
+    padding: 30px 0px;
+ }
