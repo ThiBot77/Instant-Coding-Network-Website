@@ -1,0 +1,102 @@
+<html>
+
+<header>
+    <TITLE>Instant Coding&Network</TITLE>
+    <link rel="shortcut icon" href="img/logo_instant_coding_network.png" type="image/x-icon">
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+</header>
+
+<body>
+
+    <video id="background-video" autoplay="" loop="" muted="">
+
+        <source src="video/fond2_index.mp4" type="video/mp4">
+
+    </video>
+
+
+    <div class="navigation-bar-homepage">
+        <div>
+            <nav>
+                <a href="#">HOME</a>
+                <a href="#">TEAM</a>
+                <a href="#">DISCORD</a>
+                <a href="#">FAQ</a>
+                <a href="#">PARTNER</a>
+                <div id="indicator"></div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="index_div_01">
+
+        <img src="img/logo_instant_coding_network.png" class="community_logo">
+
+        <div class="index_div_02">
+            <div>
+                <span is="type-async" id="type-text" class="Index_Title">...</span>
+                <span class="blinking-cursor">_</span>
+                <script>
+                    async function init() {
+                        const node = document.querySelector("#type-text")
+
+                        await sleep(1000)
+                        node.innerText = ""
+                        await node.type('Welcome on ')
+
+                        await node.type('Instant Coding & Network')
+                    }
+
+
+                    // Source code 🚩
+
+                    const sleep = time => new Promise(resolve => setTimeout(resolve, time))
+
+                    class TypeAsync extends HTMLSpanElement {
+                        get typeInterval() {
+                            const randomMs = 100 * Math.random()
+                            return randomMs < 50 ? 10 : randomMs
+                        }
+
+                        async type(text) {
+                            for (let character of text) {
+                                this.innerText += character
+                                await sleep(this.typeInterval)
+                            }
+                        }
+
+                        async delete(text) {
+                            for (let character of text) {
+                                this.innerText = this.innerText.slice(0, this.innerText.length - 1)
+                                await sleep(this.typeInterval)
+                            }
+                        }
+                    }
+
+                    customElements.define('type-async', TypeAsync, { extends: 'span' })
+
+
+                    init()
+
+                </script>
+
+            </div>
+            <div>
+                <h2>A new way to learn IT</h2>
+            </div>
+            <div>
+                <h3>- Linux and Microsoft OS</h3>
+                <h3>- HTML, PHP, C, Python, JS and more coding language</h3>
+                <h3>- System and Network, VPN, Cybersécurity</h3>
+            </div>
+
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="app.js"></script>
+    
+</body>
+
+</html>
