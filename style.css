@@ -153,8 +153,10 @@ nav a:nth-child(5):hover~#indicator {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 100px 0px;
-    margin: 50px 0px;
+    padding: 30px 0px;
+    margin: 120px 0px;
+    background: rgba(35, 35, 35, 0.4)
+    
 
 }
 
@@ -183,7 +185,6 @@ nav a:nth-child(5):hover~#indicator {
 
 .team_div_04{
     padding: 0px 50px;
-    margin-left: 100px;
 }
 
 
@@ -194,4 +195,28 @@ nav a:nth-child(5):hover~#indicator {
  .faq_div_02{
     text-align: center;
     padding: 30px 0px;
+ }
+
+ hr{
+    color: #525252;
+    border: solid;
+    border-radius: 1%;
+ }
+
+ .hr_thibault{
+    color: #00a6ff;
+    border: solid;
+    border-radius: 1%;
+ }
+
+ .hr_xeinel{
+    color: #ffbb00;
+    border: solid;
+    border-radius: 1%;
+ }
+
+.hr_narcos{
+    color: #ff0000;
+    border: solid;
+    border-radius: 1%;
  }

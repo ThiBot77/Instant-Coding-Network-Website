@@ -10,11 +10,8 @@
 <body>
 
     <video id="background-video" autoplay="" loop="" muted="">
-
         <source src="video/fond2_index.mp4" type="video/mp4">
-
     </video>
-
 
     <div class="navigation-bar-homepage">
         <div>
@@ -30,57 +27,12 @@
     </div>
 
     <div class="index_div_01">
-
         <img src="img/logo_instant_coding_network.png" class="community_logo">
-
         <div class="index_div_02">
             <div>
                 <span is="type-async" id="type-text" class="Index_Title">...</span>
                 <span class="blinking-cursor">_</span>
-                <script>
-                    async function init() {
-                        const node = document.querySelector("#type-text")
-
-                        await sleep(1000)
-                        node.innerText = ""
-                        await node.type('Welcome on ')
-
-                        await node.type('Instant Coding & Network')
-                    }
-
-
-                    // Source code 🚩
-
-                    const sleep = time => new Promise(resolve => setTimeout(resolve, time))
-
-                    class TypeAsync extends HTMLSpanElement {
-                        get typeInterval() {
-                            const randomMs = 100 * Math.random()
-                            return randomMs < 50 ? 10 : randomMs
-                        }
-
-                        async type(text) {
-                            for (let character of text) {
-                                this.innerText += character
-                                await sleep(this.typeInterval)
-                            }
-                        }
-
-                        async delete(text) {
-                            for (let character of text) {
-                                this.innerText = this.innerText.slice(0, this.innerText.length - 1)
-                                await sleep(this.typeInterval)
-                            }
-                        }
-                    }
-
-                    customElements.define('type-async', TypeAsync, { extends: 'span' })
-
-
-                    init()
-
-                </script>
-
+                <script src="menu.js"></script>
             </div>
             <div>
                 <h2>A new way to learn IT</h2>
@@ -88,35 +40,35 @@
             <div>
                 <h3>- Linux and Microsoft OS</h3>
                 <h3>- HTML, PHP, C, Python, JS and more coding language</h3>
-                <h3>- System and Network, VPN, Cybersécurity</h3>
+                <h3>- System and Network, VPN, Cybersecurity</h3>
             </div>
-
         </div>
     </div>
+
     <div class="team_div_01" id="TEAM">
         <div class="team_div_04">
-            <h1>Our Staff</h1>
-            <h2>The Staff Team</h2>
+            <h1>The Staff Team</h1>
+            <h3>The team of Instant Coding&Network<br> is glad to welcome you on it community.</h3>
         </div>
         <div class="team_div_02">
             <div class="team_div_03">
                 <img src="img/thibault_pp.jpg" class="team_image">
                 <h2>Thibault</h2>
-                <hr>
+                <hr class="hr_thibault">
                 <h4>Admin of Community</h4>
-                <h4>Network and system Admin, hardware technician</h4>
+                <h4>Network and system certified</h4>
             </div>
             <div class="team_div_03">
                 <img src="img/xeinel_pp.png" class="team_image">
                 <h2>Xeinel</h2>
-                <hr>
+                <hr class="hr_xeinel">
                 <h4>Admin of Community</h4>
                 <h4>Certified Developper</h4>
             </div>
             <div class="team_div_03">
                 <img src="img/narcos_pp.jpg" class="team_image">
                 <h2>Narcos</h2>
-                <hr>
+                <hr class="hr_narcos">
                 <h4>Moderator</h4>
                 <h4>Developper</h4>
             </div>
@@ -136,12 +88,11 @@
         <div>
             <h2>How to propose the publication of a lesson ?<h2>
             <hr>
-            <h4>You just have to open a ticket on discord and have the role certified. We will then review your
-                        share.</h4>
+            <h4>You just have to open a ticket on discord and have the role certified. We will then review your share.</h4>
         </div>
         <br>
-
     </div>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script src="app.js"></script>
     <script src="animation.js"></script>
